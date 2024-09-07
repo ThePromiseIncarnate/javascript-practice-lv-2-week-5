@@ -84,6 +84,15 @@ getPikachuData();
 
 // TODO: Write your function here to fetch and log Jigglypuff's name and weight
 
+async function getJigglypuffData() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/39';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Name:', data.name);
+  console.log('Weight:', data.weight);
+}
+
+getJigglypuffData();
 
 // EXERCISE 4: Fetch and Log the Name, Height, and Weight of Meowth
 
