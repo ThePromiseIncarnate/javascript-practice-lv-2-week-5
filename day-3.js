@@ -46,6 +46,14 @@ getFirstBerryName();
 
 // TODO: Write your function here to fetch and log the name of the second Pokémon
 
+async function getSecondPokemonName() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/2';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('First Pokémon Name:', data.name);
+}
+
+getSecondPokemonName();
 
 // EXERCISE 2: Fetch and Log the Flavor of the First Berry
 
@@ -56,6 +64,15 @@ getFirstBerryName();
 
 // TODO: Write your function here to fetch and log the flavor of the first Berry
 
+async function getFirstBerryFlavor() {
+  const url = 'https://pokeapi.co/api/v2/berry/1';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('First Berry Flavor:', data.flavors[0].flavor.name);
+}
+
+// Call the function to fetch and log the name of the first Berry
+getFirstBerryFlavor();
 
 // EXERCISE 3: Fetch and Log the Name and Effect of the First Ability
 
@@ -67,7 +84,7 @@ getFirstBerryName();
 // TODO: Write your function here to fetch and log the name and effect of the first Ability
 
 
-// EXERCISE 4: Fetch and Log the Name and Color of the First Item
+// EXERCISE 4: Fetch and Log the Name and Cost of the First Item
 
 // INSTRUCTIONS:
 // Create a function called `getFirstItem` that fetches data for the first Item from the Pokémon API.
