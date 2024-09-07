@@ -71,7 +71,6 @@ async function getFirstBerryFlavor() {
   console.log('First Berry Flavor:', data.flavors[0].flavor.name);
 }
 
-// Call the function to fetch and log the name of the first Berry
 getFirstBerryFlavor();
 
 // EXERCISE 3: Fetch and Log the Name and Effect of the First Ability
@@ -83,6 +82,15 @@ getFirstBerryFlavor();
 
 // TODO: Write your function here to fetch and log the name and effect of the first Ability
 
+async function getFirstAbility() {
+  const url = 'https://pokeapi.co/api/v2/ability/1';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Ability:', data.name);
+  console.log('Ability Effect:', data.effect_entries[1].effect);
+}
+
+getFirstAbility();
 
 // EXERCISE 4: Fetch and Log the Name and Cost of the First Item
 
