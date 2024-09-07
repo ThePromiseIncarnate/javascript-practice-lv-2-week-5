@@ -48,6 +48,15 @@ getCharmanderData();
 
 // TODO: Write your function here to fetch and log Squirtle's name and base experience
 
+async function getSquirtleData() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/7';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Name:', data.name);
+  console.log('Base Experience:', data.base.experience);
+}
+
+getSquirtleData();
 
 // EXERCISE 2: Fetch and Log the Name and Types of Pikachu
 
@@ -57,6 +66,13 @@ getCharmanderData();
 
 // TODO: Write your function here to fetch and log Pikachu's name and types
 
+async function getPikachuData() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/25';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Name:', data.name);
+  console.log('Types:', data.types);
+}
 
 // EXERCISE 3: Fetch and Log the Name and Weight of Jigglypuff
 
