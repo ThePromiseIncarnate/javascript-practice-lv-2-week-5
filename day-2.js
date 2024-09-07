@@ -53,7 +53,7 @@ async function getSquirtleData() {
   const response = await fetch(url);
   const data = await response.json();
   console.log('Name:', data.name);
-  console.log('Base Experience:', data.base.experience);
+  console.log('Base Experience:', data.base_experience);
 }
 
 getSquirtleData();
@@ -73,6 +73,8 @@ async function getPikachuData() {
   console.log('Name:', data.name);
   console.log('Types:', data.types);
 }
+
+getPikachuData();
 
 // EXERCISE 3: Fetch and Log the Name and Weight of Jigglypuff
 
