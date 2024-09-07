@@ -71,7 +71,7 @@ async function getPikachuData() {
   const response = await fetch(url);
   const data = await response.json();
   console.log('Name:', data.name);
-  console.log('Types:', data.types);
+  console.log('Types:', data.types[0]);
 }
 
 getPikachuData();
@@ -102,6 +102,16 @@ getJigglypuffData();
 
 // TODO: Write your function here to fetch and log Meowth's name, height, and weight
 
+async function getMeowthData() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/52';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Name:', data.name);
+  console.log('Height:', data.height);
+  console.log('Weight:', data.weight);
+}
+
+getMeowthData();
 
 // EXERCISE 5: Fetch and Log the Name and Abilities of Eevee
 
