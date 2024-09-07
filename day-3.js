@@ -101,6 +101,15 @@ getFirstAbility();
 
 // TODO: Write your function here to fetch and log the name and cost of the first Item
 
+async function getFirstItem() {
+  const url = 'https://pokeapi.co/api/v2/item/1';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Item:', data.name);
+  console.log('Cost:', data.cost);
+}
+
+getFirstItem();
 
 // EXERCISE 5: Fetch and Log the Name of the First Type
 
@@ -111,6 +120,14 @@ getFirstAbility();
 
 // TODO: Write your function here to fetch and log the name of the first Type
 
+async function getFirstType() {
+  const url = 'https://pokeapi.co/api/v2/type/1';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Type:', data.name);
+}
+
+getFirstType();
 
 // Summary:
 // These exercises help you practice using `fetch` and `async/await` to interact with various endpoints of the Pokémon API.
