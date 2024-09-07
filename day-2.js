@@ -71,7 +71,7 @@ async function getPikachuData() {
   const response = await fetch(url);
   const data = await response.json();
   console.log('Name:', data.name);
-  console.log('Types:', data.types[0]);
+  console.log('Types:', data.types[0].type.name);
 }
 
 getPikachuData();
@@ -121,6 +121,17 @@ getMeowthData();
 
 // TODO: Write your function here to fetch and log Eevee's name and abilities
 
+async function getEeveeData() {
+  const url = 'https://pokeapi.co/api/v2/pokemon/133';
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log('Name:', data.name);
+  for (i=0; i<data.abilities.length; i++) {
+    console.log(`Ability: ${data.abilities[i].ability.name}`);
+  }
+}
+
+getEeveeData();
 
 // Summary:
 // These exercises help you practice using `fetch` and `async/await` to interact with a RESTful API, specifically the Pokémon API.
